@@ -1,3 +1,5 @@
+// vấn đề timeCount
+
 // thư viện
 import classNames from "classnames/bind";
 import { useState } from "react";
@@ -33,6 +35,7 @@ function Request() {
           ...prev,
           {
             ...data,
+            timeCount: 123,
             createDate: new Date(),
             OTP: Math.floor(Math.random() * (9999 - 1000 + 1) + 1000),
             phonenumber : "0" +
@@ -43,6 +46,7 @@ function Request() {
       return [
         {
           ...data,
+          timeCount: 123,
           createDate: new Date(),
           OTP: Math.floor(Math.random() * (9999 - 1000 + 1) + 1000),
           phonenumber : "0" +
@@ -77,6 +81,7 @@ function Request() {
                 phonenumber,
                 OTP,
                 createDate,
+                timeCount,
               }) => (
                 <tr key={id}>
                   <td>{name}</td>
@@ -99,7 +104,7 @@ function Request() {
                   </td>
                   <td>
                     <Countdown
-                      date={Date.now() + duration*1000}
+                      date={Date.now() + timeCount}
                       intervalDelay={1000}
                       precision={0}
                       onComplete={() => toastTimeOut()}

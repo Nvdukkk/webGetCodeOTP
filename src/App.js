@@ -8,7 +8,6 @@ function App() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const isLogin = JSON.parse(localStorage.getItem("isLogin"));
-  // || "/Request" || "/Dashboard" || "/History" || "/Profile" || "/Password"
   useEffect(() => { 
     if (!isLogin) {
       if (pathname === "/Billing") {
