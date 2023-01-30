@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { faSignOut } from "@fortawesome/free-solid-svg-icons";
+import { faList, faSignOut  } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames/bind";
 import styles from "./HeaderNavbar.module.scss";
-import avatar from './pussycat.jpg'
+import avatar from "./pussycat.jpg";
 
 const cx = classNames.bind(styles);
 
@@ -14,22 +14,25 @@ function HeaderNavbar() {
   const nameData = JSON.parse(userData).name;
 
   return (
-    <ul className={cx("header-navbar")}>
-      <li className={cx("header-items")}>27,600 VNĐ</li>
-      <li className={cx("header-items")}>
-        <img
-          src={avatar}
-          alt="avatar"
-          className={cx("header-avatar")}
-        ></img>
-        {nameData}
-      </li>
-      <NavLink to="/Login" onClick={logout}>
-        <li className={cx("header-items")}>
-          <FontAwesomeIcon icon={faSignOut} />
-        </li>
-      </NavLink>
-    </ul>
+    <div className={cx("header-navbar")}>
+      <button className={cx("isMobile")}>
+     
+        <FontAwesomeIcon icon={faList} />
+      
+      </button>
+      <div className={cx("header-ul")}>
+        <div className={cx("header-items")}>27,600 VNĐ</div>
+        <div className={cx("header-items isDesktop")}>
+          <img src={avatar} alt="avatar" className={cx("header-avatar")}></img>
+          {nameData}
+        </div>
+        <NavLink to="/Login" onClick={logout}>
+          <div className={cx("header-items")}>
+            <FontAwesomeIcon icon={faSignOut} />
+          </div>
+        </NavLink>
+      </div>
+    </div>
   );
 }
 

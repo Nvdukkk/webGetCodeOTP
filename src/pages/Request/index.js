@@ -1,10 +1,8 @@
-// vấn đề timeCount
 
 // thư viện
 import classNames from "classnames/bind";
 import { useState } from "react";
 
-import Countdown from 'react-countdown';
 import CopyToClipboard from "react-copy-to-clipboard";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
@@ -19,10 +17,6 @@ const toastCopySuccess = () =>
   toast.success("Đã copy!", {
     pauseOnHover: false,
   });
-const toastTimeOut = () =>
-  toast.error("Sim đã hết thời gian thuê", {
-    pauseOnHover: false,
-});
 
 function Request() {
 
@@ -70,7 +64,6 @@ function Request() {
               <th>Giá</th>
               <th>Số điện thoại</th>
               <th>OTP</th>
-              <th>Thời gian</th>
               <th>Tạo lúc</th>
             </tr>
           </thead>
@@ -101,15 +94,6 @@ function Request() {
                     >
                     <span>{OTP}</span>
                     </CopyToClipboard>
-                  </td>
-                  <td>
-                    <Countdown
-                      date={Date.now() + timeCount}
-                      intervalDelay={1000}
-                      precision={0}
-                      onComplete={() => toastTimeOut()}
-                      renderer={props => <div>{props.total}</div>}>
-                    </Countdown>
                   </td>
                   <td>
                     {createDate.toLocaleString("en-US", {

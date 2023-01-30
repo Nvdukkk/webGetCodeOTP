@@ -5,10 +5,10 @@ export default ({ setSelectData }) => {
   const [data, setData] = useState([]);
 
   const mappingData = (data) => {
-    return data.map(({ id, name, price, duration }) => {
+    return data.map(({ id, name, price}) => {
       return {
-        value: { id, name, price, duration },
-        label: `${name} - ${price}đ - ${duration}s`,
+        value: { id, name, price },
+        label: `${name} - ${price}đ `,
       };
     });
   };
@@ -27,6 +27,7 @@ export default ({ setSelectData }) => {
 
   return (
     <Select
+      className="react-select-container"
       isClearable
       placeholder="Tìm ứng dụng"
       onChange={(value) => setSelectData({ ...value})}

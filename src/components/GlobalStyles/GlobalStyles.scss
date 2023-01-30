@@ -176,6 +176,9 @@ table {
   vertical-align: baseline;
   border-radius: 0.25em;
 }
+.react-select-container {
+  width: 250px;
+}
 .form-group {
   margin-bottom: 15px;
 
@@ -283,16 +286,16 @@ table {
     border: 1px solid #ed1c24;
   }
 }
-.bg-techcombank-span{
+.bg-techcombank-span {
   background-color: #ed1c24;
   color: #fff;
 }
 
-.bg-momo-span{
+.bg-momo-span {
   background-color: rgb(216 45 139/1);
   color: #fff;
 }
-.bg-vp-span{
+.bg-vp-span {
   background-color: #00a65a;
   color: #fff;
 }
@@ -317,13 +320,13 @@ table {
 }
 
 .overlay-after {
-//   background-color: white;
+  //   background-color: white;
   background-color: rgba(0, 0, 0, 0.62);
   opacity: 1;
 }
 
 .overlay-before {
-//   background-color: transparent;
+  //   background-color: transparent;
   background-color: rgba(0, 0, 0, 0);
   opacity: 0;
 }
@@ -352,7 +355,6 @@ table {
 }
 
 .content-before {
-  
   background-color: transparent;
 }
 
@@ -389,7 +391,6 @@ table {
       font-size: 18px;
       padding: 6px 12px;
       width: 80%;
-
     }
     span {
       font-size: 18px;
@@ -412,13 +413,13 @@ table {
   }
 }
 
-.tech-border{
+.tech-border {
   border: 1px solid #ed1c24;
 }
-.vp-border{
+.vp-border {
   border: 1px solid #00a65a;
 }
-.momo-border{
+.momo-border {
   border: 1px solid #f54fdc;
 }
 .modal-footer {
@@ -438,20 +439,34 @@ table {
     }
   }
 }
-@media (min-width: 768px) {
+
+@media (max-width: 1000px) {
   .col-sm-6 {
     width: 50%;
     float: left;
     padding-right: 15px;
     padding-left: 15px;
   }
+  .isMobile {
+    display: block;
+  }
+  .isDesktop {
+    display: none;
+  }
 }
 
-@media (min-width: 1200px) {
+//laptop
+@media (min-width: 1001px) {
   .col-lg-4 {
     width: calc(100% / 3);
     float: left;
     padding-right: 15px;
     padding-left: 15px;
+  }
+  .isMobile {
+    display: none;
+  }
+  .isDesktop {
+    display: block;
   }
 }
