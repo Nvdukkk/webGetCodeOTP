@@ -12,7 +12,6 @@ import Register from "../pages/Register";
 
 //Public routes
 const publicRoutes = [
-  { path: "/", element: <Home /> },
   { path: "/Dashboard", element: <Dashboard /> },
   { path: "/Billing", element: <Billing /> },
   { path: "/Request", element: <Request /> },
@@ -22,6 +21,7 @@ const publicRoutes = [
 ];
 
 const routes = [
+  { path: "/", element: <Login /> },
   { path: "/Login", element: <Login /> },
   { path: "/Register", element: <Register /> },
   { path: "/", element: <DefaultLayout />, children: publicRoutes },
