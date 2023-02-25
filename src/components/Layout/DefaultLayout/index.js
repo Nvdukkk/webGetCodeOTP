@@ -8,13 +8,19 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 
 const cx = classNames.bind(styles);
+const sideBarClassname = cx({
+  "sidebar": true,
+  "active" : true,
+})
 
 function DefaultLayout() {
   return (
     <div className={cx("wrapper")}>
       <Header />
       <div className={cx("container")}>
-        <Sidebar />
+        <div className={sideBarClassname}>
+          <Sidebar />
+        </div>
         <div className={cx("content")}>
           <Outlet />
         </div>

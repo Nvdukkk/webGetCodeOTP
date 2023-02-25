@@ -19,7 +19,7 @@ function Sidebar() {
   };
 
   return (
-    <aside className={cx("wrapper isDesktop")}>
+    <aside className={cx("wrapper")}>
       {SIDEBAR.map(({ id, title, children }) => (
         <div key={id}>
           <div className={cx("header")}>{title}</div>

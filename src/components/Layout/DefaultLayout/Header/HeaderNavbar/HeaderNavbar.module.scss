@@ -11,7 +11,12 @@
     button {
       background-color: #3c8dbc;
       color: white;
-      padding-left: 10px;
+      padding: 0 10px;
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background-color: #094263;
+      }
     }
   }
   .header-items {
@@ -19,7 +24,6 @@
     background-color: #3c8dbc;
     color: white;
   }
-  /// buggggggggggggggggggggggggggggggg
 }
 @media (min-width: 1001px) {
   .header-navbar {

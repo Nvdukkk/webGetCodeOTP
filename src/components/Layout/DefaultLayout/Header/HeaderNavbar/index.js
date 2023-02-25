@@ -13,9 +13,11 @@ function HeaderNavbar() {
   const userData = localStorage.getItem("data");
   const nameData = JSON.parse(userData).name;
 
+  const showSideBar = localStorage.getItem("data");
+
   return (
     <div className={cx("header-navbar")}>
-      <button className={cx("isMobile")}>
+      <button className={cx("isMobile")} onClick={showSideBar}>
      
         <FontAwesomeIcon icon={faList} />
       

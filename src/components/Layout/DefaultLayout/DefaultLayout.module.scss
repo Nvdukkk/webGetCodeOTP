@@ -1,6 +1,18 @@
 @media (max-width: 1000px) {
   .content {
     width: 100%;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+  }
+  .sidebar{
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+  }
+  .sidebar.active{
+    transform: translateX(0);
+  }
+  .sidebar.active + .content {
+    transform: translateX(30%);
   }
 }
 @media (min-width: 1001px) {
