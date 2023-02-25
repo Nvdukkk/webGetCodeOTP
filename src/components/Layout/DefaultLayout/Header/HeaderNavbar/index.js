@@ -9,15 +9,13 @@ const cx = classNames.bind(styles);
 
 const logout = () => localStorage.removeItem("isLogin");
 
-function HeaderNavbar() {
+function HeaderNavbar(props) {
   const userData = localStorage.getItem("data");
   const nameData = JSON.parse(userData).name;
 
-  const showSideBar = localStorage.getItem("data");
-
   return (
     <div className={cx("header-navbar")}>
-      <button className={cx("isMobile")} onClick={showSideBar}>
+      <button className={cx("isMobile")} onClick={props.onClick}>
      
         <FontAwesomeIcon icon={faList} />
       

@@ -5,7 +5,11 @@ import HeaderNavbar from "./HeaderNavbar";
 
 const cx = classNames.bind(styles);
 
-function Header() {
+function Header(props) {
+  const handleData = () => {
+    const data = "";
+    props.onClick(data);
+  };
   return (
     <header className={cx("wrapper")}>
       <div className={cx("logo-brand")}>
@@ -21,7 +25,7 @@ function Header() {
         </div>
       </div>
 
-      <HeaderNavbar />
+      <HeaderNavbar onClick={handleData} />
     </header>
   );
 }
